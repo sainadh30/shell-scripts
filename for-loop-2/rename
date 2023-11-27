@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Author: Loka Sainadh
+# Date: 26-11-2023
+# Description: Renaming the files
+# Modified: 26-11-2023
+
+for filename in *.txt
+do 
+    mv "$filename" "${filename%.txt}.none"
+done
+

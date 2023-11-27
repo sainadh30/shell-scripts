@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# Author: Loka Sainadh
+# Date: 26-11-2023
+# Description: This Script checks whether the files exist or not
+# Modified: 26-11-2023
+
+FILES="/etc/passwd
+/etc/group
+/etc/shadow
+/etc/fake
+/etc/nsswitch.conf
+/etc/sshd_sshd_config"
+
+for file in $FILES
+do
+    if [ -e "$file" ]
+    then
+        echo "$file is PRESENT"
+    else
+        echo "$file is NOT PRESENT"
+    fi
+done
+
