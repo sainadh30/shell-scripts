@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Author: Loka Sainadh
+# Date: 26-11-2023
+# Description: Copy Files to Remote Hosts
+# Modified: 26-11-2023
+
+host=$(cat /home/ec2-user/shellscripts/abc)
+for i in $host
+do  
+    scp somefile "$i:/tmp"
+    if [ $? -eq 0 ]
+    then
+        echo "Your file copied to $i"
+    else
+        echo "Your file is not copied to $i"
+    fi
+done
+
