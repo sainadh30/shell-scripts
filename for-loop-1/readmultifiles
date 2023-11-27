@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# Author: Loka sainadh
+# Date: 26-11-2023
+# Description: This script creates multiple files based on user input
+# Modified: 26-11-2023
+
+echo "How many files do you want to create?"
+read t
+
+echo
+
+echo "Please enter the base name of the files:"
+read n
+
+echo
+
+for i in $(seq 1 $t)
+do
+    touch "$n.$i"
+done
+
+echo "Files created successfully."

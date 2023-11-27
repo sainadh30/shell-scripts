@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Author: Loka sainadh
+# Date: 26-11-2023
+# Description: This script creates multiple files at a time
+# Modified: 26-11-2023
+
+for i in {1..10}
+do 
+        touch sainadh.$i
+done

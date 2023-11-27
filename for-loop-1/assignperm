@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Author: Loka sainadh
+# Date: 26-11-2023
+# Description: Assigning Permissions to the files.
+# Modified: 26-11-2023
+
+for i in hello.*
+do 
+        echo "Assigning Write Permissions to $i"
+        chmod a+w $i
+        sleep 1
+        echo "Assigned permissions successfully to $i"
+done
