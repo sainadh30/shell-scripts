@@ -1,4 +1,3 @@
-[Oi
 #!/bin/bash
 
 # Author : LOka Sainadh
