@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Author: Loka Sainadh
+# Date: 26-11-2023
+# Description: This script will log only defined keywords
+# Modified: 26-11-2023
+
+tail -fn0 journalctl | while read -r line
+do 
+    echo "$line" | grep -E -i "refused|invalid|error|fail|lost|shut|down|offline"
+    if [ $? -eq 0 ]
+    then 
+        echo "$line" >> /tmp/filtered-messages
+    fi
+done
+
