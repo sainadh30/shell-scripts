@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# Author: Loka Sainadh
+# Date: 26-11-2023
+# Description: This script creates the user account
+# Modified: 26-11-2023
+
+echo "Please Provide User Name: "
+read u
+
+grep -q $u /etc/passwd
+        if [ $u -eq 0 ]
+        then
+                echo "--error $u user account already present"
+        echo "Please choose another username ?"
+        echo
+        exit 0
+        fi
+
+echo "Please provide User Description: "
+read d
+
+echo
+
+useradd $u -c "$d"
+echo $u account has been created
+

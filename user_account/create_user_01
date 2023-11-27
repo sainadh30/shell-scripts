@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Author: Loka Sainadh
+# Date: 26-11-2023
+# Description: This script creates the user account
+# Modified: 26-11-2023
+
+echo "Please Provide a User Name ?"
+read u
+
+echo 
+
+useradd $u
+
+echo "user $u account created successfully"
