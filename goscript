@@ -1,0 +1,39 @@
+#!/bin/bash
+
+read -r -p "Enter name of script: " script
+
+read -r -p "Whats your fullname: " fname
+
+read -r -p "Whats the description of this script: " description
+
+echo "#!/bin/bash" > /home/ec2-user/shell-scripts/${script}
+
+echo
+
+echo "###########################################" >> /home/ec2-user/shell-scripts/${script}
+
+echo
+
+echo "#Author: " $fname >> /home/ec2-user/shell-scripts/${script}
+
+echo
+
+echo "#Date: " $(date) >> /home/ec2-user/shell-scripts/${script}
+
+echo
+
+echo "#Description: " $description >> /home/ec2-user/shell-scripts/${script}
+
+echo
+
+echo "#Modified: " $(date) >> /home/ec2-user/shell-scripts/${script}
+
+echo
+
+echo "###########################################" >> /home/ec2-user/shell-scripts/${script}
+
+echo
+
+chmod a+x ${script}
+
+vim ${script}
