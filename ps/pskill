@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Author: Loka Sainadh
+# Date: 26-11-2023
+# Description: This script will check the running process & kill it
+# Modified: 26-11-2023
+
+#ps -ef | grep "sleep 700" | grep -v grep | awk '{print $1}' | xargs -I{} echo {}
+
+ps -ef | grep "sleep 700" | grep -v grep | awk '{print $2}' | xargs -I{} kill {}

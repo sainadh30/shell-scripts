@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Author: Loka Sainadh
+# Date: 26-11-2023
+# Description: This script will check the running process & kill using variable
+# Modified: 26-11-2023
+
+a=`ps -ef | grep "sleep 700" | grep -v grep | awk '{print $2}'`
+
+for i in $a 
+do
+    kill $a
+done
