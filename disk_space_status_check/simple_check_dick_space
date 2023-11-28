@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Author: Loka Sainadh
+# Date: 26-11-2023
+# Description: This script will check the disk space 
+# Modified: 26-11-2023
+
+echo
+echo Following is the disk space status
+echo
+df -h | awk '0+$5 >= 10 {print}' | awk '{print $5, $6}'
