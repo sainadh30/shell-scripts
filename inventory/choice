@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# Author: Loka Sainadh
+# Date: 26-11-2023
+# Description: This script will ask to add or delete a record from database file
+# Modified: 26-11-2023
+
+echo
+echo Please select one of the following options:
+echo
+echo 'a = Add a record'
+echo 'd = Delete a record'
+echo
+        read choice
+
+                case $choice in
+a) /home/ec2-user/shell-scripts/inventory/add-record;;
+d) /home/ec2-user/shell-scripts/inventory/del-record;;
+*) echo Invalid choice - Bye.
+
+                esac
