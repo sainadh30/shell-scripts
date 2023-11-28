@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Author: Loka Sainadh
+# Date: 26-11-2023
+# Description: This script will list the total no of files
+# Modified: 26-11-2023
+
+a=`ls -l file* | wc -l`
+
+	if [ $a -eq 20 ]
+	then
+		echo "Yes there are total $a files"
+	else
+		echo "Files are less than 20"
+	fi
